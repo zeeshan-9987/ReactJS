@@ -1,0 +1,20 @@
+.aqua{
+    width: 200px;
+    height: 200px;
+    border: 2px solid aqua;
+    background-color:aqua;
+}
+
+.red{
+    width: 200px;
+    height: 200px;
+    border: 2px solid red;
+    background-color:red;
+}
+
+.burlywood{
+    width: 200px;
+    height: 200px;
+    border: 2px solid burlywood;
+    background-color: burlywood;
+}
