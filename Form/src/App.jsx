@@ -188,6 +188,36 @@ function App() {
           />{" "}
           Sports
         </li>
+        <li>
+          <input
+            type="checkbox"
+            name="hobbies"
+            value="Cycling"
+            checked={form.hobbies.includes("Cycling")}
+            onChange={handleChange}
+          />{" "}
+          Cycling
+        </li>
+        <li>
+          <input
+            type="checkbox"
+            name="hobbies"
+            value="Swimming"
+            checked={form.hobbies.includes("Swimming")}
+            onChange={handleChange}
+          />{" "}
+          Swimming
+        </li>
+        <li>
+          <input
+            type="checkbox"
+            name="hobbies"
+            value="Gaming"
+            checked={form.hobbies.includes("Gaming")}
+            onChange={handleChange}
+          />{" "}
+          Gaming
+        </li>
       </ul>
 
       <button onClick={handleSubmit}>Submit</button>
