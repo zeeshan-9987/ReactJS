@@ -13,11 +13,11 @@ function App() {
   const total = a + b + c + d;
   const avg = total / 4;
 
-  let winner = "";
-  if (a >= b && a >= c && a >= d) winner = "Party A";
-  if (b > a && b >= c && b >= d) winner = "Party B";
-  if (c > a && c > b && c >= d) winner = "Party C";
-  if (d > a && d > b && d > c) winner = "Party D";
+  let result = "";
+  if (a >= b && a >= c && a >= d) result = "Party A";
+  if (b > a && b >= c && b >= d) result = "Party B";
+  if (c > a && c > b && c >= d) result = "Party C";
+  if (d > a && d > b && d > c) result = "Party D";
 
   return (
     <>
@@ -46,27 +46,27 @@ function App() {
           <tr>
             <th>Party</th>
             <th>Votes</th>
-            <th>Winner</th>
+            <th>Result</th>
           </tr>
           <tr>
             <td>Party A</td>
             <td>{a}</td>
-            <td>{winner === "Party A" ? "Yes" : ""}</td>
+            <td>{result === "Party A" ? "Won" : ""}</td>
           </tr>
           <tr>
             <td>Party B</td>
             <td>{b}</td>
-            <td>{winner === "Party B" ? "Yes" : ""}</td>
+            <td>{result === "Party B" ? "Won" : ""}</td>
           </tr>
           <tr>
             <td>Party C</td>
             <td>{c}</td>
-            <td>{winner === "Party C" ? "Yes" : ""}</td>
+            <td>{result === "Party C" ? "Won" : ""}</td>
           </tr>
           <tr>
             <td>Party D</td>
             <td>{d}</td>
-            <td>{winner === "Party D" ? "Yes" : ""}</td>
+            <td>{result === "Party D" ? "Won" : ""}</td>
           </tr>
         </table>
       )}
