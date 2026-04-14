@@ -35,9 +35,16 @@ function App() {
       <input
         type="text"
         value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
+        maxLength={20}
+        onChange={(e) => {
+          const value = e.target.value;
+          // Only alphabets + max 20 characters
+          if (/^[A-Za-z\s]*$/.test(value)) {
+            setInputValue(value);
+          }
+        }}
         placeholder="Enter something"
-      />
+/>
       <button onClick={handleAdd}>Add</button>
     </div>
 
