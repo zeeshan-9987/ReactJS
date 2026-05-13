@@ -1,0 +1,68 @@
+.butterfly {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  pointer-events: none;
+  z-index: 9999;
+
+  transform: translate(-50%, -50%);
+}
+
+/* BODY */
+.body {
+  width: 6px;
+  height: 14px;
+  background: black;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* WINGS COMMON */
+.wing {
+  width: 18px;
+  height: 18px;
+  background: linear-gradient(45deg, #00c3ff, #6a5acd);
+  border-radius: 50% 50% 50% 50%;
+  position: absolute;
+  top: 50%;
+
+  transform-origin: center;
+  filter: drop-shadow(0 0 8px #00c3ff);
+}
+
+/* LEFT WING */
+.left {
+  left: 0;
+  transform: translate(-90%, -50%);
+  animation: flapLeft 0.25s infinite alternate ease-in-out;
+}
+
+/* RIGHT WING */
+.right {
+  right: 0;
+  transform: translate(90%, -50%);
+  animation: flapRight 0.25s infinite alternate ease-in-out;
+}
+
+/* WING ANIMATION */
+@keyframes flapLeft {
+  from { transform: translate(-90%, -50%) rotate(-20deg); }
+  to   { transform: translate(-90%, -50%) rotate(20deg); }
+}
+
+@keyframes flapRight {
+  from { transform: translate(90%, -50%) rotate(20deg); }
+  to   { transform: translate(90%, -50%) rotate(-20deg); }
+}
+
+
+
+@media (max-width: 768px) {
+  .butterfly {
+    display: none;
+  }
+}

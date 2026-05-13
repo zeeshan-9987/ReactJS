@@ -1,0 +1,160 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 50px;
+
+  /* 🔥 DARK PREMIUM BACKGROUND */
+  background: linear-gradient(
+    90deg,
+    #0f172a,
+    #111827,
+    #0f172a
+  );
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  border-bottom: 1px solid var(--border);
+
+  /* soft depth */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  opacity: 1;
+}
+
+/* LOGO */
+.logo {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* NAV CONTAINER */
+.nav-links {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  align-items: center;
+}
+
+/* 🔹 NORMAL STATE = SIMPLE TEXT */
+.nav-links a {
+  text-decoration: none;
+  color: #cbd5e1;   /* light gray text */
+  font-size: 14px;
+  font-weight: 500;
+
+  padding: 6px 4px;
+
+  background: transparent;
+  border-radius: 0;
+
+  transition: all 0.25s ease;
+}
+
+/* 🔥 HOVER STATE = BUTTON STYLE (Contact Me vibe) */
+.nav-links a:hover {
+  color: black;
+
+  background: var(--primary);
+  padding: 10px 14px;
+  border-radius: 8px;
+
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 20px var(--primary-glow);
+}
+
+/* MENU ICON */
+.menu-icon {
+  display: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+
+    background: #111827;
+    flex-direction: column;
+
+    width: 200px;
+    padding: 20px;
+
+    display: none;
+    border-left: 1px solid var(--border);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+
+    background: rgba(17, 24, 39, 0.95);
+    backdrop-filter: blur(12px);
+
+    flex-direction: column;
+
+    width: 220px;
+    padding: 20px;
+
+    display: none;
+    border-left: 1px solid var(--border);
+
+    border-radius: 0 0 0 12px;
+  }
+
+  .nav-links.active {
+    display: flex;
+    animation: slideIn 0.3s ease;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links a {
+    padding: 12px 14px;
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  .nav-links a:hover {
+    transform: none;
+  }
+
+  .nav-links a.active {
+    background: var(--primary);
+    color: black;
+    border-radius: 8px;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

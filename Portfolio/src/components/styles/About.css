@@ -1,0 +1,145 @@
+.about {
+  min-height: 100vh;
+  padding: 100px 50px;
+
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #111827,
+    #0f0f0f
+  );
+}
+
+/* MAIN CONTAINER */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 60px;
+}
+
+/* LEFT SIDE */
+.about-left {
+  flex: 1;
+}
+
+.about-left h2 {
+  font-size: 48px;
+  color: var(--primary);
+
+  margin-bottom: 25px;
+
+  text-shadow: 0 0 15px var(--primary-glow);
+}
+
+.about-left p {
+  color: var(--text-muted);
+
+  line-height: 1.8;
+  font-size: 16px;
+
+  margin-bottom: 18px;
+
+  max-width: 600px;
+}
+
+/* RIGHT SIDE */
+.about-right {
+  flex: 1;
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+  gap: 20px;
+}
+
+/* CARDS */
+.about-card {
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid var(--border);
+
+  padding: 25px;
+  border-radius: 16px;
+
+  transition: 0.3s ease;
+
+  backdrop-filter: blur(10px);
+}
+
+/* CARD HOVER */
+.about-card:hover {
+  transform: translateY(-6px);
+
+  border-color: var(--primary);
+
+  box-shadow:
+    0 0 20px rgba(0, 195, 255, 0.15);
+}
+
+.about-card h3 {
+  color: white;
+
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+
+.about-card p {
+  color: var(--text-muted);
+
+  line-height: 1.7;
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-left h2 {
+    font-size: 40px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .about {
+    padding: 70px 20px;
+  }
+
+  .about-left h2 {
+    font-size: 34px;
+    text-align: center;
+  }
+
+  .about-left p {
+    text-align: center;
+  }
+
+  .about-right {
+    width: 100%;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about {
+    padding: 70px 20px;
+  }
+
+  .about-left h2 {
+    font-size: 34px;
+    text-align: center;
+  }
+
+  .about-left p {
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .about-right {
+    width: 100%;
+  }
+}
